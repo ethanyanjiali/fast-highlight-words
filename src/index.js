@@ -50,27 +50,24 @@ export default class Highlighter extends PureComponent {
     className: PropTypes.string,
   }
 
-  compareText = (textOne, textTwo) => {
-    const { caseSensitive = false } = this.props;
-    if (caseSensitive) {
-      return textOne === textTwo;
-    }
-    return textOne.toUpperCase() === textTwo.toUpperCase();
-  };
-
   findOccurrences = (haystack, needle) => {
+    const { caseSensitive = false } = this.props;
+    if (!caseSensitive) {
+      haystack = haystack.toUpperCase();
+      needle = needle.toUpperCase();
+    }
     const indexes = [];
     let index = 0;
-    if (haystack.length === 0 || needle.length === 0) {
+    if (!haystack || !needle || haystack.length === 0 || needle.length === 0) {
       return indexes;
     }
     while (index < haystack.length) {
-      if (this.compareText(haystack.substring(index, index + needle.length), needle)) {
-        indexes.push(index);
-        index += needle.length;
-      } else {
-        index += 1;
+      index = haystack.indexOf(needle, index);
+      if (index === -1) {
+        break;
       }
+      indexes.push(index);
+      index += 1;
     }
     return indexes;
   };
