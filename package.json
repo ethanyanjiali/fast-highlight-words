@@ -1,8 +1,10 @@
 {
-  "name": "fast-highlight-words",
+  "name": "react-fast-highlighter",
   "version": "1.0.0",
   "description": "A react component to highlight words in a performant way",
-  "main": "index.js",
+  "main": "lib/index.js",
+  "browser": "lib/index.js",
+  "keywords": ["react", "highlight", "highlighter"],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "BABEL_ENV=production rm -rf lib && babel src -d lib",
@@ -11,14 +13,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ethanyanjiali/fast-highlight-words.git"
+    "url": "git+https://github.com/ethanyanjiali/react-fast-highlighter.git"
   },
   "author": "Ethan Yanjia Li",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/ethanyanjiali/fast-highlight-words/issues"
+    "url": "https://github.com/ethanyanjiali/react-fast-highlighter/issues"
   },
-  "homepage": "https://github.com/ethanyanjiali/fast-highlight-words#readme",
+  "homepage": "https://github.com/ethanyanjiali/react-fast-highlighter#readme",
   "dependencies": {
     "prop-types": "^15.6.1",
     "react": "^16.3.2",
