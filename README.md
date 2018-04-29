@@ -7,7 +7,7 @@ Under the root folder of you project
 npm i -S react-fast-highlighter
 ```
 In your code where you want to highlight words in a piece of text
-```
+```javascript
 import Highlighter from 'react-fast-highlighter'
 
 class MyComponent extends React.Component {
@@ -25,41 +25,43 @@ class MyComponent extends React.Component {
 ```
 
 # Props
-```
-/**
+```javascript
+{
+    /**
     * The full text to display
     * @default ""
     */
-text: PropTypes.string,
+    text: PropTypes.string,
 
-/**
+    /**
     * The part of text that needs to be highlighted
     * @default ""
     * @type string
     */
-highlightText: PropTypes.string,
+    highlightText: PropTypes.string,
 
-/**
+    /**
     * CSS class name applied to highlighted text
     * @default "highlighted"
     */
-highlightClassName: PropTypes.string,
+    highlightClassName: PropTypes.string,
 
-/**
+    /**
     * Search should be case sensitive; defaults to false
     * @default false
     */
-caseSensitive: PropTypes.string,
+    caseSensitive: PropTypes.string,
 
-/**
+    /**
     * Type of tag to wrap around highlighted matches
     * @default mark
     */
-highlightTag: PropTypes.string,
+    highlightTag: PropTypes.string,
 
-/**
+    /**
     * Custom class name to use on outer span
     * @default NULL
     */
-className: PropTypes.string,
+    className: PropTypes.string,
+}
 ```
