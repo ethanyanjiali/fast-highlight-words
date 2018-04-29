@@ -15,8 +15,8 @@ class MyComponent extends React.Component {
         return (
             <div>
                 <Highlighter
-                    text="I would like to highlight a word in this sentence."
-                    highlighText="like"
+                    text="The first second was alright, but the second second was tough."
+                    highlighText="second"
                 />
             </div>
         )
@@ -64,3 +64,6 @@ class MyComponent extends React.Component {
     className: PropTypes.string,
 }
 ```
+# Roadmap
+1. Add benchmark for common highlighter libraries
+2. Add support for highlighting multiple words
