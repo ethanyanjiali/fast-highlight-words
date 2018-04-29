@@ -36,7 +36,6 @@ class MyComponent extends React.Component {
     /**
     * The part of text that needs to be highlighted
     * @default ""
-    * @type string
     */
     highlightText: PropTypes.string,
 
