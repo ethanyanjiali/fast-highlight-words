@@ -1,7 +1,7 @@
 # react-fast-highlighter
 > A performant react component to highlight fragement of text
 
-# Get Started
+## Get Started
 Under the root folder of you project
 ```
 npm i -S react-fast-highlighter
@@ -24,7 +24,7 @@ class MyComponent extends React.Component {
 }
 ```
 
-# Props
+## Props
 ```javascript
 {
     /**
@@ -64,6 +64,16 @@ class MyComponent extends React.Component {
     className: PropTypes.string,
 }
 ```
-# Roadmap
+
+## Development
+
+1. Make sure node > 6 and npm > 3
+0. Install dependencies
+    ```bash
+    npm i
+    ```
+0. 
+
+## Roadmap
 1. Add benchmark for common highlighter libraries
 2. Add support for highlighting multiple words
