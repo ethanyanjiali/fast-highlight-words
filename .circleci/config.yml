@@ -27,7 +27,6 @@ jobs:
           - v1-dependencies-
 
       - run: npm i
-      - run: npm run build
 
       - save_cache:
           paths:
@@ -43,6 +42,7 @@ jobs:
       - run:
           name: Authenticate with registry
           command: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > ~/repo/.npmrc
+      - run: npm run build
       - run:
           name: Publish package
           command: npm publish
