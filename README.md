@@ -16,11 +16,18 @@ class MyComponent extends React.Component {
             <div>
                 <Highlighter
                     text="The first second was alright, but the second second was tough."
-                    highlighText="second"
+                    highlightText="second"
                 />
             </div>
         )
     }
+}
+```
+The highlighted part would be wrapped in a `mark` tag, with `highlighted` classname.
+You can customize the highlight style by adding some CSS:
+```css
+.highlighted {
+  background-color: red;
 }
 ```
 
@@ -49,7 +56,7 @@ class MyComponent extends React.Component {
     * Search should be case sensitive; defaults to false
     * @default false
     */
-    caseSensitive: PropTypes.string,
+    caseSensitive: PropTypes.bool,
 
     /**
     * Type of tag to wrap around highlighted matches
@@ -80,6 +87,20 @@ class MyComponent extends React.Component {
 
 ## Publish
 
+The CI is configured to publish a patch version for every commit on master. However, if you need to publish manually:
+
+Build it first
+```
+npm run build
+```
+Incement the version number
+```
+npm version minor
+```
+Then publish
+```bash
+npm publish
+```
 
 
 ## Roadmap

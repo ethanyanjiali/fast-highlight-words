@@ -35,7 +35,7 @@ export default class Highlighter extends PureComponent {
       * Search should be case sensitive; defaults to false
       * @default false
       */
-    caseSensitive: PropTypes.string,
+    caseSensitive: PropTypes.bool,
 
     /**
       * Type of tag to wrap around highlighted matches
