@@ -1,10 +1,14 @@
 {
   "name": "react-fast-highlighter",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "A react component to highlight words in a performant way",
   "main": "lib/index.js",
   "browser": "lib/index.js",
-  "keywords": ["react", "highlight", "highlighter"],
+  "keywords": [
+    "react",
+    "highlight",
+    "highlighter"
+  ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "BABEL_ENV=production rm -rf lib && babel src -d lib",
