@@ -27,10 +27,27 @@ jobs:
           - v1-dependencies-
 
       - run: npm i
+      - run: npm run build
 
       - save_cache:
           paths:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
+
+      - run:
+          name: Authenticate with registry
+          command: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > ~/repo/.npmrc
+      - run:
+          name: Increment version
+          command: npm version patch
+      - run:
+          name: Publish package
+          command: npm publish
+      - run: git config credential.helper 'cache --timeout=120'
+      - run: git config user.email "liyanjia92@gmail.com"
+      - run: git add .
+      - run: git commit -m "Publish [skip ci]"
+      - run: git push -q https://${GITHUB_TOKEN}@github.com/ethanyanjiali/react-fast-highlighter.git master
+
 
 
