@@ -1,4 +1,4 @@
-# react-fast-highlighter
+# react-fast-highlighter [![CircleCI](https://circleci.com/gh/ethanyanjiali/react-fast-highlighter.svg?style=svg)](https://circleci.com/gh/ethanyanjiali/react-fast-highlighter)
 > A performant react component to highlight fragement of text
 
 ## Get Started
@@ -72,7 +72,15 @@ class MyComponent extends React.Component {
     ```bash
     npm i
     ```
-0. 
+0. Strat Storybook
+    ```
+    npm run storybook
+    ```
+0. Go to `localhost:6006` to see the component
+
+## Publish
+
+
 
 ## Roadmap
 1. Add benchmark for common highlighter libraries
