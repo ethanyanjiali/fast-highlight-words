@@ -1,6 +1,8 @@
 # react-fast-highlighter [![CircleCI](https://circleci.com/gh/ethanyanjiali/react-fast-highlighter.svg?style=svg)](https://circleci.com/gh/ethanyanjiali/react-fast-highlighter)
 > A performant react component to highlight fragement of text
 
+[中文文档](https://github.com/ethanyanjiali/react-fast-highlighter/blob/master/README.zh.md)
+
 ## Demo
 
 [![Edit 01j8o25l9l](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/01j8o25l9l)
